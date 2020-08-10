@@ -12,7 +12,7 @@ public class Basetest implements Cinstants{
 	public static WebDriver driver;
 	public void openBrowser(String browser) throws Throwable {
 		Basetest bt=new Basetest();
-		System.setProperty(bt.configValuse("browser_key"),bt.configValuse("browser_value"));
+		System.setProperty(bt.getConfigValue("browser_key"),bt.getConfigValue("browser_value"));
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 		driver=new ChromeDriver();
@@ -27,7 +27,7 @@ public class Basetest implements Cinstants{
 		}
 		driver.manage().window().maximize();
 	}
-	public String configValuse(String key) throws Throwable
+	public String getConfigValue(String key) throws Throwable
 	{
 		FileInputStream fis=new FileInputStream(property_path);
 		Properties prop=new Properties();
