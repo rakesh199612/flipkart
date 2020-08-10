@@ -25,6 +25,7 @@ public class Basetest implements Cinstants{
 		{
 		driver=new OperaDriver();
 		}
+		driver.manage().window().maximize();
 	}
 	public String configValuse(String key) throws Throwable
 	{

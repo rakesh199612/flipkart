@@ -8,6 +8,6 @@ public class Login extends Basetest{
 	{
 		Basetest bt=new Basetest();
 		bt.openBrowser("chrome");
-		driver.get("https//:www.flipkart.com/");
+		driver.get("https://www.flipkart.com/");
 	}
 }
