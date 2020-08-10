@@ -7,7 +7,7 @@ public class Login extends Basetest{
 	public void login() throws Throwable
 	{
 		Basetest bt=new Basetest();
-		bt.openBrowser();
-		driver.get("");
+		bt.openBrowser("chrome");
+		driver.get("https//:www.flipkart.com/");
 	}
 }
