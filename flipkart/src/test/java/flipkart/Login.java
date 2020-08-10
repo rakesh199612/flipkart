@@ -1,5 +1,7 @@
 package flipkart;
 
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Login extends Basetest{
@@ -8,8 +10,10 @@ public class Login extends Basetest{
 	{
 		Basetest bt=new Basetest();
 		bt.openBrowser("chrome");
-		driver.get("https://www.flipkart.com/");
-		FlipFindby ffb=new FlipFindby();
+		Assert.assertEquals(bt.getTitle(),bt.getConfigValue("homepage") );
+		FlipFindby ffb=new FlipFindby(driver);
 		ffb.loginPopup();
+		Thread.sleep(5000);
+		ffb.logout(driver);
 	}
 }

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Basetest implements Cinstants{
 	public static WebDriver driver;
@@ -26,6 +28,7 @@ public class Basetest implements Cinstants{
 		driver=new OperaDriver();
 		}
 		driver.manage().window().maximize();
+		driver.get(bt.getConfigValue("url"));
 	}
 	public String getConfigValue(String key) throws Throwable
 	{
@@ -35,4 +38,12 @@ public class Basetest implements Cinstants{
 		String value = prop.getProperty(key);
 		return value;
 	}
+	public String getTitle()
+	{
+		WebDriverWait wait=new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.titleContains("Online"));
+		String pageTitle = driver.getTitle();
+		return pageTitle;
+	}
+	
 }
