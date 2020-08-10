@@ -9,5 +9,7 @@ public class Login extends Basetest{
 		Basetest bt=new Basetest();
 		bt.openBrowser("chrome");
 		driver.get("https://www.flipkart.com/");
+		FlipFindby ffb=new FlipFindby();
+		ffb.loginPopup();
 	}
 }
