@@ -45,5 +45,8 @@ public class Basetest implements Cinstants{
 		String pageTitle = driver.getTitle();
 		return pageTitle;
 	}
-	
+	public void closeBrowser()
+	{
+		driver.quit();
+	}
 }
