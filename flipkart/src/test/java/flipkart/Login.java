@@ -15,9 +15,11 @@ public class Login extends Basetest{
 		ffb.loginPopup();
 		Thread.sleep(5000);
 		ffb.logout(driver);
+		Thread.sleep(5000);
 		ffb.loginHome();
 		Thread.sleep(5000);
 		ffb.logout(driver);
+		Thread.sleep(5000);
 		ffb.loginCart();
 		Thread.sleep(5000);
 		ffb.logout(driver);
