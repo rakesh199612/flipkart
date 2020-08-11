@@ -38,10 +38,10 @@ public class Basetest implements Cinstants{
 		String value = prop.getProperty(key);
 		return value;
 	}
-	public String getTitle()
+	public String getTitle(String title)
 	{
 		WebDriverWait wait=new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.titleContains("Online"));
+		wait.until(ExpectedConditions.titleContains(title));
 		String pageTitle = driver.getTitle();
 		return pageTitle;
 	}

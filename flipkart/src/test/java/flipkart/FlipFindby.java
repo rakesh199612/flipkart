@@ -82,10 +82,9 @@ public class FlipFindby {
 	
 	public void loginCart() throws Throwable
 	{
-		x.click();
-		Basetest bt=new Basetest();
-		cartHome.click();
+		Basetest bt=new Basetest();		
 		cartLogin.click();
+		Thread.sleep(5000);
 		usernameLogin.sendKeys(bt.getConfigValue("username"));
 		passwordLogin.sendKeys(bt.getConfigValue("password"));
 		loginpage.click();

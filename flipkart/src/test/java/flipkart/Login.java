@@ -10,7 +10,7 @@ public class Login extends Basetest{
 	{
 		Basetest bt=new Basetest();
 		bt.openBrowser("chrome");
-		Assert.assertEquals(bt.getTitle(),bt.getConfigValue("homepage") );
+		Assert.assertEquals(bt.getTitle("Online"),bt.getConfigValue("homepage") );
 		FlipFindby ffb=new FlipFindby(driver);
 		ffb.loginPopup();
 		Thread.sleep(5000);
@@ -20,6 +20,8 @@ public class Login extends Basetest{
 		Thread.sleep(5000);
 		ffb.logout(driver);
 		Thread.sleep(5000);
+		ffb.getCartHome().click();
+		Assert.assertEquals(bt.getTitle("Cart"), bt.getConfigValue("cartpage"));
 		ffb.loginCart();
 		Thread.sleep(5000);
 		ffb.logout(driver);
